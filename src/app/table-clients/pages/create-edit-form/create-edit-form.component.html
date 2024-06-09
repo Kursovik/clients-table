@@ -1,0 +1,46 @@
+<form nz-form [formGroup]="form">
+  <div class="float-label">
+    <nz-form-control>
+      <app-input
+        formControlName="name"
+        label="Имя"
+        [errors]="errors['name']"
+      ></app-input>
+    </nz-form-control>
+  </div>
+  <div class="float-label">
+    <nz-form-control>
+      <app-input
+        formControlName="surname"
+        label="Фамилия"
+        [errors]="errors['surname']"
+      ></app-input>
+    </nz-form-control>
+  </div>
+  <div class="float-label">
+    <nz-form-control>
+      <app-input
+        formControlName="email"
+        label="Email"
+        [errors]="errors['email']"
+      ></app-input>
+    </nz-form-control>
+  </div>
+  <div class="float-label">
+    <nz-form-control>
+      <app-input
+        formControlName="phone"
+        label="Телефон"
+        [errors]="errors['phone']"
+      ></app-input>
+    </nz-form-control>
+  </div>
+  <div style="width: 100%; margin-top: 40px">
+    <app-submit-buttons
+      [cancelLabel]="btnsLabel.cancelLabel"
+      [submitLabel]="btnsLabel.submitLabel"
+      (onSubmit)="submit()"
+      (onCancel)="cancelModal()"
+    ></app-submit-buttons>
+  </div>
+</form>
