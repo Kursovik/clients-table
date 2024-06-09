@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+$modalTitleColor: #231f20;
+
+body {
+  background-color: #c2daf8;
+  font-family: Roboto, sans-serif;
+}
+/*Input float label styles*/
+.float-label {
+  position: relative;
+  height: 45px;
+  width: 100%;
+  margin-bottom: 17px;
+  input {
+    position: absolute;
+    cursor: text;
+    color: #1A2124;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.25px;
+    width: 100%;
+    border: 1px solid #bbc5c9;
+    border-radius: 10px;
+    padding: 17px;
+    outline: none;
+    z-index: 1;
+    &:focus {
+      border: 1px solid #2f7fd5;
+    }
+  }
+
+  ::placeholder {
+    color: transparent;
+  }
+  label {
+    position: absolute;
+    top: 33px;
+    left: 13px;
+    padding: 0 4px;
+    font-size: 16px;
+    background-color: white;
+    color: #bbc5c9;
+    transition: 0.2s ease;
+    z-index: 1;
+  }
+  .label-invalid{
+    color: #DA1B1B !important;
+  }
+  input:focus + label {
+    top: 5px;
+    left: 10px;
+    z-index: 10;
+    font-size: 14px;
+    color: #2f7fd5;
+  }
+  input:not(:placeholder-shown) + label {
+    top: 5px;
+    left: 8px;
+    z-index: 10;
+    font-size: 14px;
+  }
+}
+/* Nz-zorro modal styles */
+.ant-modal-content {
+  border-radius: 20px;
+  .ant-modal-header {
+    border-radius: 20px;
+    padding: 44px 40px 20px 40px;
+    border: none;
+
+    .ant-modal-title {
+      font-weight: 500;
+      font-size: 24px;
+      color: $modalTitleColor;
+    }
+  }
+}
+.anticon-question-circle {
+  display: none;
+}
+.ant-modal-confirm-body
+  > .anticon
+  + .ant-modal-confirm-title
+  + .ant-modal-confirm-content {
+  margin-left: 0;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  color: #263238;
+}
+.ant-modal-confirm-body .ant-modal-confirm-title {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  margin-bottom: 28px;
+  color: $modalTitleColor;
+}
+/* Nz-zorro table-styles */
+.ant-table-thead > tr > th {
+  background-color: transparent;
+}
+.ant-checkbox-indeterminate .ant-checkbox-inner{
+  background-color: #4A95F7;
+  &:after{
+    height: 2px;
+    background-color: white;
+  }
+}

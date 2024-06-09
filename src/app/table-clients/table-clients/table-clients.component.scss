@@ -1,0 +1,22 @@
+@import "src/app/styles/variables";
+
+:host{
+  .clients{
+    width: 100vw;
+    padding: 0 16px 16px 16px;
+    &__title{
+      padding: 32px 0;
+      align-items: center;
+      .title{
+        color: $titleColor;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 33px;
+      }
+    }
+    &__table{
+      background-color: #fff;
+      border-radius: 20px;
+    }
+  }
+}
